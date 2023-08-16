@@ -1,0 +1,28 @@
+package com.capgemini.fulltech.aplicacao;
+
+import com.capgemini.fulltech.classes.Endereco;
+
+public class AppEndereco {
+	public static void main(String[] args) {
+		
+		try {
+			
+			Endereco endereco = new Endereco("Av. Rio Branco", 0, "Rio", "21578-001");
+			
+			System.out.println(endereco.getDados());
+			
+		} catch (NullPointerException e) {
+			
+			System.out.println("Erro de referência nula: " + e.getMessage());
+			
+		} catch (NumberFormatException e) {
+			
+			System.out.println("Erro numérico: " + e.getMessage());
+			
+		} catch (Exception e) {
+			System.out.println("Ocorreu um erro geral: " + e.getMessage());
+		}
+		
+
+	}
+}
